@@ -1,0 +1,6 @@
+framework module Pods_ios_homework_documents {
+  umbrella header "Pods-ios-homework-documents-umbrella.h"
+
+  export *
+  module * { export * }
+}
