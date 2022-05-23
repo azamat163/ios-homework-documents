@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		942A67A1767DCA1EB20BD1D3 /* Pods_ios_homework_documents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F61230DE25FF62BE39BAE857 /* Pods_ios_homework_documents.framework */; };
+		F33FB575282BE95500121342 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33FB574282BE95500121342 /* PasswordViewController.swift */; };
+		F33FB578282BFC7E00121342 /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33FB577282BFC7E00121342 /* KeyChain.swift */; };
+		F344F22C2832297900F1C80D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F344F22B2832297900F1C80D /* SettingsViewController.swift */; };
+		F344F22E283229C900F1C80D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F344F22D283229C900F1C80D /* HomeViewController.swift */; };
+		F344F239283239CA00F1C80D /* PasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F344F238283239CA00F1C80D /* PasswordViewModel.swift */; };
+		F394439D283B6A8500B1B44E /* CommonAlertError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F394439C283B6A8500B1B44E /* CommonAlertError.swift */; };
 		F3E2E89F281BA60800BB7BEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E2E89E281BA60800BB7BEB /* AppDelegate.swift */; };
 		F3E2E8A1281BA60800BB7BEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E2E8A0281BA60800BB7BEB /* SceneDelegate.swift */; };
 		F3E2E8A8281BA60A00BB7BEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3E2E8A7281BA60A00BB7BEB /* Assets.xcassets */; };
@@ -20,6 +26,13 @@
 /* Begin PBXFileReference section */
 		2D5191E9F1E19977CF704133 /* Pods-ios-homework-documents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-homework-documents.release.xcconfig"; path = "Target Support Files/Pods-ios-homework-documents/Pods-ios-homework-documents.release.xcconfig"; sourceTree = "<group>"; };
 		56B879BC7F7DB70B9F3E0256 /* Pods-ios-homework-documents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-homework-documents.debug.xcconfig"; path = "Target Support Files/Pods-ios-homework-documents/Pods-ios-homework-documents.debug.xcconfig"; sourceTree = "<group>"; };
+		F33FB574282BE95500121342 /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
+		F33FB577282BFC7E00121342 /* KeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
+		F344F22B2832297900F1C80D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F344F22D283229C900F1C80D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F344F22F28322E5B00F1C80D /* ios-homework-documents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ios-homework-documents.entitlements"; sourceTree = "<group>"; };
+		F344F238283239CA00F1C80D /* PasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewModel.swift; sourceTree = "<group>"; };
+		F394439C283B6A8500B1B44E /* CommonAlertError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonAlertError.swift; sourceTree = "<group>"; };
 		F3E2E89B281BA60800BB7BEB /* ios-homework-documents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-homework-documents.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3E2E89E281BA60800BB7BEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3E2E8A0281BA60800BB7BEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +74,67 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F33FB571282BE8DD00121342 /* Password */ = {
+			isa = PBXGroup;
+			children = (
+				F33FB574282BE95500121342 /* PasswordViewController.swift */,
+				F344F238283239CA00F1C80D /* PasswordViewModel.swift */,
+			);
+			path = Password;
+			sourceTree = "<group>";
+		};
+		F33FB572282BE91B00121342 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				F344F22A2832295000F1C80D /* Settings */,
+				F344F2292832294700F1C80D /* Home */,
+				F3E2E8B4281BAA5900BB7BEB /* DocumentList */,
+				F33FB571282BE8DD00121342 /* Password */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		F33FB573282BE92C00121342 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F3E2E89E281BA60800BB7BEB /* AppDelegate.swift */,
+				F3E2E8A0281BA60800BB7BEB /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F33FB576282BFC5700121342 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F33FB577282BFC7E00121342 /* KeyChain.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F344F2292832294700F1C80D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F344F22D283229C900F1C80D /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F344F22A2832295000F1C80D /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F344F22B2832297900F1C80D /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		F394439B283B6A4600B1B44E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F394439C283B6A8500B1B44E /* CommonAlertError.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		F3E2E892281BA60800BB7BEB = {
 			isa = PBXGroup;
 			children = (
@@ -82,9 +156,11 @@
 		F3E2E89D281BA60800BB7BEB /* ios-homework-documents */ = {
 			isa = PBXGroup;
 			children = (
-				F3E2E8B4281BAA5900BB7BEB /* DocumentList */,
-				F3E2E89E281BA60800BB7BEB /* AppDelegate.swift */,
-				F3E2E8A0281BA60800BB7BEB /* SceneDelegate.swift */,
+				F394439B283B6A4600B1B44E /* Common */,
+				F344F22F28322E5B00F1C80D /* ios-homework-documents.entitlements */,
+				F33FB576282BFC5700121342 /* Services */,
+				F33FB573282BE92C00121342 /* App */,
+				F33FB572282BE91B00121342 /* Modules */,
 				F3E2E8A7281BA60A00BB7BEB /* Assets.xcassets */,
 				F3E2E8A9281BA60A00BB7BEB /* LaunchScreen.storyboard */,
 				F3E2E8AC281BA60A00BB7BEB /* Info.plist */,
@@ -120,6 +196,8 @@
 			dependencies = (
 			);
 			name = "ios-homework-documents";
+			packageProductDependencies = (
+			);
 			productName = "ios-homework-documents";
 			productReference = F3E2E89B281BA60800BB7BEB /* ios-homework-documents.app */;
 			productType = "com.apple.product-type.application";
@@ -148,6 +226,8 @@
 				Base,
 			);
 			mainGroup = F3E2E892281BA60800BB7BEB;
+			packageReferences = (
+			);
 			productRefGroup = F3E2E89C281BA60800BB7BEB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -220,7 +300,13 @@
 				F3E2E8B6281BAA7E00BB7BEB /* DocumentListViewModel.swift in Sources */,
 				F3E2E8B8281BB1C600BB7BEB /* DocumentCollectionViewCell.swift in Sources */,
 				F3E2E89F281BA60800BB7BEB /* AppDelegate.swift in Sources */,
+				F394439D283B6A8500B1B44E /* CommonAlertError.swift in Sources */,
 				F3E2E8A1281BA60800BB7BEB /* SceneDelegate.swift in Sources */,
+				F344F22E283229C900F1C80D /* HomeViewController.swift in Sources */,
+				F33FB578282BFC7E00121342 /* KeyChain.swift in Sources */,
+				F33FB575282BE95500121342 /* PasswordViewController.swift in Sources */,
+				F344F22C2832297900F1C80D /* SettingsViewController.swift in Sources */,
+				F344F239283239CA00F1C80D /* PasswordViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +444,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "ios-homework-documents/ios-homework-documents.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PS835QR9S2;
@@ -386,6 +473,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "ios-homework-documents/ios-homework-documents.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PS835QR9S2;

@@ -61,7 +61,6 @@ final class DocumentListViewController: UIViewController {
     }
     
     private func setupNavigationBar() {
-        navigationItem.title = "Document List"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add photo", style: .plain, target: self, action: #selector(addPhotoTapped))
     }
     
@@ -93,7 +92,7 @@ final class DocumentListViewController: UIViewController {
     }
     
     private func setupViewModel() {
-        viewModel.onStateCHanged = { [weak self] state in
+        viewModel.onStateChanged = { [weak self] state in
                     guard let self = self else { return }
                     switch state {
                     case .initial:
@@ -125,10 +124,10 @@ final class DocumentListViewController: UIViewController {
 
 extension DocumentListViewController {
     private func createCollectionViewLayout() -> UICollectionViewLayout {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(200))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(225))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(200))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(225))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         
         let section = NSCollectionLayoutSection(group: group)

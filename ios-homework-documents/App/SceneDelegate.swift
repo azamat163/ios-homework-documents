@@ -18,15 +18,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScena = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScena)
-        let vc = DocumentListViewController(viewModel: DocumentListViewModel())
+        let vc = PasswordViewController(viewModel: PasswordViewModel())
         let navController = UINavigationController(rootViewController: vc)
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = .gray
-        
-        navController.navigationBar.standardAppearance = appearance
-        navController.navigationBar.scrollEdgeAppearance = appearance
-        window?.rootViewController = navController
+        navController.navigationItem.title = "Login Screen"
+        window?.rootViewController = vc
         window?.makeKeyAndVisible()
     }
 

@@ -10,15 +10,16 @@ import UIKit
 
 struct Document {
     let id: Int
+    let title: String
     let image: UIImage
 }
 
 final class DocumentListViewModel {
-    var onStateCHanged: ((State) -> Void)?
+    var onStateChanged: ((State) -> Void)?
     
     private(set) var state: State = .initial {
         didSet {
-            onStateCHanged?(state)
+            onStateChanged?(state)
         }
     }
 
@@ -41,10 +42,16 @@ final class DocumentListViewModel {
             guard let image = image else { return }
             docs.append(Document(
                 id: index,
+                title: imageURL.lastPathComponent,
                 image: image
             ))
         }
-        documents = docs.sorted(by: { $0.id > $1.id })
+        
+        let ud = UserDefaults.standard
+        let isSortAsc: Bool = ud.bool(forKey: .isSortAsc)
+        documents = isSortAsc == true ?
+        docs.sorted(by: { $0.title < $1.title }) :
+        docs.sorted(by: { $0.title > $1.title })
         state = .loaded
     }
     
