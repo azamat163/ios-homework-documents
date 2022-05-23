@@ -20,10 +20,20 @@ class DocumentCollectionViewCell: UICollectionViewCell {
         return imageView
     }()
     
+    private lazy var titleLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.textColor = .black
+        label.backgroundColor = .white
+        label.font = UIFont.systemFont(ofSize: 10, weight: .regular)
+        
+        return label
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         contentView.addSubview(imageView)
+        contentView.addSubview(titleLabel)
         setup()
     }
     
@@ -33,9 +43,16 @@ class DocumentCollectionViewCell: UICollectionViewCell {
 
     private func setup() {
         imageView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.top.leading.trailing.equalToSuperview()
             make.height.equalTo(200)
             make.width.equalTo(bounds.width)
+            make.bottom.equalTo(titleLabel.snp.top).offset(-5)
+        }
+        
+        titleLabel.snp.makeConstraints { make in
+            make.bottom.leading.trailing.equalToSuperview()
+            make.top.equalTo(imageView.snp.bottom).offset(5)
+            make.height.equalTo(20)
         }
     }
 }
@@ -45,5 +62,6 @@ extension DocumentCollectionViewCell {
     
     func configure(model: Model) {
         imageView.image = model.image
+        titleLabel.text = model.title
     }
 }
